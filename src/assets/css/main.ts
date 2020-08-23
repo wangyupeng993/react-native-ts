@@ -1,5 +1,10 @@
+import {Dimensions} from "react-native";
+const window = Dimensions.get('window');
 const main = {
-    container: {},
+    container: {
+        width: window.width,
+        height: window.height
+    },
     relative: {
         position: 'relative'
     },
