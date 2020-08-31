@@ -1,21 +1,26 @@
 import 'react-native-gesture-handler';
-import React from "react";
-import {Provider,connect} from "react-redux";
+import React,{Suspense} from "react";
+import {Text} from "react-native";
+import {Provider} from "react-redux";
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
+import routes from "../../router/routes";
 import store from "../../redux";
-import Home from "../home/Home";
-import Login from "../login/login";
 
 const Stack = createStackNavigator();
 const AppMain = () => {
     return (
         <Provider store={store}>
             <NavigationContainer>
-                <Stack.Navigator initialRouteName={'Login'}>
-                    <Stack.Screen name={'Login'} component={Login}></Stack.Screen>
-                    <Stack.Screen name={'Home'} component={Home} options={{title: ''}}></Stack.Screen>
-                </Stack.Navigator>
+                <Suspense fallback={<Text>....</Text>}>
+                    <Stack.Navigator initialRouteName={'Login'}>
+                        {routes.map(item => {
+                           return  <Stack.Screen key={item.path} name={item.name}
+                                                 options={item.options}
+                                                 component={item.component} />
+                        })}
+                    </Stack.Navigator>
+                </Suspense>
             </NavigationContainer>
         </Provider>
     );
