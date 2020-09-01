@@ -4,7 +4,7 @@ import {Text} from "react-native";
 import {Provider} from "react-redux";
 import {NavigationContainer} from "@react-navigation/native";
 import {createStackNavigator} from "@react-navigation/stack";
-import routes from "../../router/routes";
+import {StackRoutes} from "../../router/routes";
 import store from "../../redux";
 
 const Stack = createStackNavigator();
@@ -13,8 +13,8 @@ const AppMain = () => {
         <Provider store={store}>
             <NavigationContainer>
                 <Suspense fallback={<Text>....</Text>}>
-                    <Stack.Navigator initialRouteName={'Login'}>
-                        {routes.map(item => {
+                    <Stack.Navigator initialRouteName={'TabNavigate'}>
+                        {StackRoutes.map(item => {
                            return  <Stack.Screen key={item.path} name={item.name}
                                                  options={item.options}
                                                  component={item.component} />

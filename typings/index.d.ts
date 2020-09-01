@@ -20,7 +20,8 @@ interface commReactProps {
     route: {
         key: string,
         name: string,
-        params: any
+        params: {[propsName: string]: any}
     },
     [propsNam: string]: any
 }
+

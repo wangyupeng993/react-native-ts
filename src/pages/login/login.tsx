@@ -5,7 +5,7 @@ import {mapStateToProps,mapDispatchToProps} from "../../redux/mapProps";
 
 const Login = (props: commReactProps) => {
     const {navigation} = props;
-    return (<TouchableHighlight onPress={() => navigation.navigate('Home')}>
+    return (<TouchableHighlight onPress={() => navigation.navigate('TabNavigate')}>
         <View>
             <Text>login</Text>
         </View>
