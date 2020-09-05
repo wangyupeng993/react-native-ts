@@ -7,7 +7,7 @@ const TabNavigation = () => {
     return (<Tab.Navigator>
         {TabRouters.map((item) => {
             return (<Tab.Screen key={item.path} name={item.name}
-                                options={item.options}
+                                options={() => item.options()}
                                 component={item.component} />)
         })}
     </Tab.Navigator>);

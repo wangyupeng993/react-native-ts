@@ -12,29 +12,27 @@ const headerPublic = {
 export const StackRoutes = [{
     path: '/tab',
     name: 'TabNavigate',
-    options: {
-        title: (route: Partial<any>) => {
-            const routeName = getFocusedRouteNameFromRoute(route);
-            switch (routeName) {
-                case 'Home':
-                    return '首页';
-                    break;
-                case 'My':
-                    return '个人中心';
-                    break;
-                default:
-                    return '';
-            }
-        },
-        ...headerPublic
+    options: (route: Partial<any>) => {
+        const routeName = getFocusedRouteNameFromRoute(route);
+        let title: string = '';
+        switch (routeName) {
+            case 'Home':
+                title = '首页';
+                break;
+            case 'My':
+                title = '个人中心';
+                break;
+            default:
+                title = '';
+        };
+        return Object.assign({title},headerPublic);
     },
     component:  React.lazy(() => import('../pages/layout/Tab'))
 },{
     path: '/login',
     name: 'Login',
-    options: {
-        title: () => '登陆',
-        ...headerPublic
+    options: () => {
+        return Object.assign({title: '登陆'},headerPublic);
     },
     component: React.lazy(() => import('../pages/login/login')),
 },];
@@ -42,17 +40,15 @@ export const StackRoutes = [{
 export const TabRouters = [{
     path: 'home',
     name: 'Home',
-    options: {
-        title: '首页',
-        ...headerPublic
+    options: () => {
+        return Object.assign({title: '首页'},headerPublic);;
     },
     component: React.lazy(() => import('../pages/home/Home'))
 },{
     path: 'my',
     name: 'My',
-    options: {
-        title: '我的',
-        ...headerPublic
+    options: () => {
+        return Object.assign({title: '我的'},headerPublic);
     },
     component: React.lazy(() => import('../pages/my/my'))
 }];
