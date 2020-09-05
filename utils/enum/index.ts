@@ -1,5 +1,5 @@
-export const NavigationEnum = {
-    Stack: 1,
-    Tab: 2,
-    Drawer: 3
+export const enum NavigationEnum {
+    Stack = 1,
+    Tab,
+    Drawer
 };
