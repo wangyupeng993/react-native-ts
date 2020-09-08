@@ -1,4 +1,6 @@
-const bg = {
+import {StyleSheet} from "react-native";
+
+const bg = StyleSheet.create({
     red: {
         backgroundColor:"#FF0000"
     },
@@ -15,7 +17,7 @@ const bg = {
         backgroundColor:"#12B700"
     },
     cyan: {
-        backgroundColor:"#1cbbb4"
+        backgroundColor:"#00c9a9"
     },
     blue: {
         backgroundColor:"#0081ff"
@@ -101,5 +103,5 @@ const bg = {
     grayLight: {
         backgroundColor:"#F8F9F9"
     }
-}
+});
 export default bg;

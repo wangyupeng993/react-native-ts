@@ -4,7 +4,10 @@ import {getFocusedRouteNameFromRoute} from "@react-navigation/core";
 const headerPublic = {
     headerTintColor: '#fff',
     headerStyle: {
-        backgroundColor: '#00c9a9'
+        backgroundColor: '#00c9a9',
+        borderBottomWidth: 0,
+        shadowOpacity: 0,
+        elevation: 0
     },
     headerTitleStyle: {}
 };

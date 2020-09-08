@@ -1,6 +1,6 @@
-import {Dimensions} from "react-native";
+import {Dimensions,StyleSheet} from "react-native";
 const window = Dimensions.get('window');
-const main = {
+const main = StyleSheet.create({
     container: {
         width: window.width,
         height: window.height
@@ -22,12 +22,6 @@ const main = {
     },
     bottom: {
         bottom: 0
-    },
-    fl: {
-        float: 'left'
-    },
-    fr: {
-        float: 'right'
     },
     hidden: {
         overflow: 'hidden'
@@ -79,6 +73,69 @@ const main = {
     },
     itemsB: {
         alignItems: 'baseline'
+    },
+    text_xs: {
+        fontSize: 20
+    },
+    text_xm: {
+        fontSize: 24
+    },
+    text_sm: {
+        fontSize: 28
+    },
+    text_ds: {
+        fontSize: 32
+    },
+    text_dm: {
+        fontSize: 36
+    },
+    text_df: {
+        fontSize: 44
+    },
+    text_lg: {
+        fontSize: 55
+    },
+    text_xl: {
+        fontSize: 80
+    },
+    text_max:{
+        fontSize: 120
+    },
+    textCenter: {
+        textAlign: 'center'
+    },
+    textLeft: {
+        textAlign: 'left'
+    },
+    textRight: {
+        textAlign: 'right'
+    },
+    pd_min:{
+        padding :5
+    },
+    pd_xs:{
+        padding: 10
+    },
+    pd_xm:{
+        padding: 20
+    },
+    pd_sm:{
+        padding: 30
+    },
+    pd_ds: {
+        padding: 40
+    },
+    pd_dm:{
+        padding: 50
+    },
+    pd_df:{
+        padding: 60
+    },
+    pd_lg:{
+        padding: 70
+    },
+    pd_xl:{
+        padding: 80
     }
-};
+});
 export default main;
