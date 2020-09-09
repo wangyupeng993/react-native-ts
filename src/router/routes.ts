@@ -20,7 +20,7 @@ export const StackRoutes = [{
         let title: string = '';
         switch (routeName) {
             case 'Home':
-                title = '首页';
+                title = '';
                 break;
             case 'My':
                 title = '个人中心';
@@ -44,7 +44,7 @@ export const TabRouters = [{
     path: 'home',
     name: 'Home',
     options: () => {
-        return Object.assign({title: '首页'},headerPublic);;
+        return Object.assign({title: '搭伙购'},headerPublic);;
     },
     component: React.lazy(() => import('../pages/home/Home'))
 },{

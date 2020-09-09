@@ -1,5 +1,5 @@
 import React,{Fragment} from "react";
-import {View,Text,ScrollView,Image} from 'react-native';
+import {View,Text,ScrollView,Image,TextInput} from 'react-native';
 import {connect} from "react-redux";
 import {mapDispatchToProps,mapStateToProps} from "../../redux/mapProps";
 import style from "./styles";
@@ -9,8 +9,12 @@ const Home = (props: commReactProps) => {
     return (<Fragment>
         <View style={main.container}>
             <ScrollView style={main.container}>
-                <View style={Object.assign({},main.pd_ds,bg.cyan,main.flex,main.itemsC)}>
+                <View style={style.logoBg}>
                     <Image style={style.logo} source={require('../../assets/image/public/logo.png')}></Image>
+                </View>
+
+                <View style={style.searchBg}>
+                    <TextInput style={style.searchInput} placeholder={'请输入关键字搜索'} />
                 </View>
             </ScrollView>
         </View>
