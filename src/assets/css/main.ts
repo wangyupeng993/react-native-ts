@@ -5,6 +5,12 @@ const main = StyleSheet.create({
         width: window.width,
         height: window.height
     },
+    containerW: {
+        width: window.width
+    },
+    containerH: {
+        height: window.height
+    },
     relative: {
         position: 'relative'
     },
