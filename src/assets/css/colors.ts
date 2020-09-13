@@ -1,4 +1,6 @@
-const colors = {
+import {StyleSheet} from "react-native";
+
+const colors = StyleSheet.create({
     red: {
         color: "#FF0000"
     },
@@ -86,5 +88,5 @@ const colors = {
     greyLight: {
         color: "#e7ebed"
     }
-}
+});
 export default colors;

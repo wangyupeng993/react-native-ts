@@ -1,0 +1,7 @@
+
+Showing All Messages
+
+Build target ReactNativeDemo of project ReactNativeDemo with configuration Debug
+error: Signing for "ReactNativeDemo" requires a development team. Select a development team in the Signing & Capabilities editor. (in target 'ReactNativeDemo' from project 'ReactNativeDemo')
+
+

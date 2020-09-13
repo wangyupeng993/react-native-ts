@@ -56,6 +56,36 @@ const main = StyleSheet.create({
     flexWR: {
         flexWrap: 'wrap-reverse'
     },
+    growMin: {
+        flexGrow: 1
+    },
+    growXs: {
+        flexGrow: 2
+    },
+    growXm: {
+        flexGrow: 3
+    },
+    growSm: {
+        flexGrow: 4
+    },
+    growDs: {
+        flexGrow: 5
+    },
+    growDm: {
+        flexGrow: 6
+    },
+    growDf: {
+        flexGrow: 7
+    },
+    growLg: {
+        flexGrow: 8
+    },
+    growXl: {
+        flexGrow: 9
+    },
+    growMax: {
+        flexGrow: 10
+    },
     justifyE: {
         justifyContent: 'flex-end'
     },
@@ -81,31 +111,31 @@ const main = StyleSheet.create({
         alignItems: 'baseline'
     },
     text_xs: {
-        fontSize: 20
+        fontSize: 12
     },
     text_xm: {
-        fontSize: 24
+        fontSize: 16
     },
     text_sm: {
-        fontSize: 28
+        fontSize: 18
     },
     text_ds: {
-        fontSize: 32
+        fontSize: 20
     },
     text_dm: {
-        fontSize: 36
+        fontSize: 22
     },
     text_df: {
-        fontSize: 44
+        fontSize: 24
     },
     text_lg: {
-        fontSize: 55
+        fontSize: 26
     },
     text_xl: {
-        fontSize: 80
+        fontSize: 28
     },
     text_max:{
-        fontSize: 120
+        fontSize: 30
     },
     textCenter: {
         textAlign: 'center'
