@@ -46,7 +46,17 @@ const style = StyleSheet.create({
     choiceIcon: Object.assign({
         width: 18,
         height: 26
-    },main.mg_r_xs)
+    },main.mg_r_xs),
+    choiceItem: Object.assign({
+        borderRadius: 12,
+        overflow: "hidden"
+    },bg.white,main.mg_b_xm),
+    choiceItemImage: Object.assign({
+        width: (window.width - 40),
+        height: 160
+    }),
+    choiceItemData: Object.assign({},main.pd_tb_xs,main.growMin,main.flex,main.directionW,main.itemsC,main.justifyC),
+    choiceProgress: {flexBasis: '50%',height: 5,borderRadius: 3}
 });
 
 export default style;
